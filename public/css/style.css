@@ -1,0 +1,44 @@
+body{
+  background-color: rgb(14, 150, 168);
+}
+.container-fluid, .container{
+    padding: 1% 9%;
+}
+ul{
+    margin-left: auto;
+}
+
+table{
+   margin-top: 20px;
+}
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: hsl(0, 60%, 95%);
+    padding: 1% 15%;
+    text-align: center;
+    color: black;
+}
+.navbar-brand{
+    font-family: "Ubuntu";
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.nav-item{
+    padding: 0px 18px;
+}
+.nav-link{
+    font-size: 1.5rem;
+    font-family: "Montserrat-Light";
+}
+.text-footer{
+    font-size: 1.0rem;
+    font-family: "Montserrat-Light";
+}

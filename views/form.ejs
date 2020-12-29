@@ -1,0 +1,41 @@
+<%- include("partials/header"); -%>
+    <form class="form-input" action="/fullUrl" method="POST">
+        <div class="card-body row no-gutters align-items-center">
+            <div class="col">
+                <input name="longUrl" class="form-control form-control-lg" type="url"
+                    placeholder="Enter Full Valid Url" autocomplete="off">
+            </div>
+            <!--end of col-->
+            <div class="col-auto">
+                <button class="btn btn-lg btn-success" type="submit">Shrink</button>
+            </div>
+            <!--end of col-->
+        </div>
+    </form>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Full Url</th>
+                <th scope="col">Short Url</th>
+                <th scope="col">Clicks</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% foundUrls.forEach(foundUrl=> { %>
+                <tr>
+                    <td><a href="<%= foundUrl.longUrl %>" style="color: white; text-decoration: none;" target="_blank">
+                            <%= foundUrl.longUrl %>
+                        </a></td>
+                    <td><a href="<%= foundUrl.shortUrl %>" style="color: white; text-decoration: none;" target="_blank">
+                            <%= foundUrl.shortUrl %>
+                        </a></td>
+                    <td>
+                        <%= foundUrl.clicks %>
+                    </td>
+                </tr>
+                <% }) %>
+        </tbody>
+    </table>
+
+
+    <%- include("partials/footer"); -%>
